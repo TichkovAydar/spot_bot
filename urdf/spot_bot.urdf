@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="spot_bot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="7.12333364431567E-19 0.000517086726119178 0.00428451360506727"
+        rpy="0 0 0" />
+      <mass
+        value="0.00232245365402225" />
+      <inertia
+        ixx="2.18426696019626E-08"
+        ixy="-3.56490329324233E-40"
+        ixz="1.01177820037674E-41"
+        iyy="1.52010394282833E-07"
+        iyz="1.66764997206505E-41"
+        izz="1.52010394282833E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="R_F_T">
+    <inertial>
+      <origin
+        xyz="-0.011056 -0.012401 -0.0070526"
+        rpy="0 0 0" />
+      <mass
+        value="0.0005931" />
+      <inertia
+        ixx="3.5457E-09"
+        ixy="3.7182E-25"
+        ixz="-2.7193E-26"
+        iyy="8.0307E-09"
+        iyz="0"
+        izz="8.0307E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/R_F_T.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/R_F_T.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_f_t"
+    type="revolute">
+    <origin
+      xyz="0.006 0.042436 0.00056823"
+      rpy="1.7502 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_F_T" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_F_D">
+    <inertial>
+      <origin
+        xyz="-0.003662 -0.022776 0.018007"
+        rpy="0 0 0" />
+      <mass
+        value="0.00011293" />
+      <inertia
+        ixx="4.5428E-10"
+        ixy="-1.223E-27"
+        ixz="-3.4407E-26"
+        iyy="5.2968E-10"
+        iyz="-1.6156E-26"
+        izz="5.2968E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/R_F_D.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/R_F_D.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_f_d"
+    type="revolute">
+    <origin
+      xyz="-0.0096545 -0.049066 -0.027905"
+      rpy="-0.25941 0 0" />
+    <parent
+      link="R_F_T" />
+    <child
+      link="R_F_D" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_B_T">
+    <inertial>
+      <origin
+        xyz="-0.011056 -0.012401 -0.0070526"
+        rpy="0 0 0" />
+      <mass
+        value="0.0005931" />
+      <inertia
+        ixx="3.5457E-09"
+        ixy="4.4684E-25"
+        ixz="3.4581E-25"
+        iyy="8.0307E-09"
+        iyz="0"
+        izz="8.0307E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/R_B_T.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/R_B_T.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_b_t"
+    type="revolute">
+    <origin
+      xyz="0.006 -0.051005 0.00046595"
+      rpy="1.7305 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="R_B_T" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="R_B_D">
+    <inertial>
+      <origin
+        xyz="-0.003662 -0.022776 0.018007"
+        rpy="0 0 0" />
+      <mass
+        value="0.00011293" />
+      <inertia
+        ixx="4.5428E-10"
+        ixy="2.2014E-27"
+        ixz="1.976E-26"
+        iyy="5.2968E-10"
+        iyz="1.2925E-26"
+        izz="5.2968E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/R_B_D.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/R_B_D.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_b_d"
+    type="revolute">
+    <origin
+      xyz="-0.0096745 -0.049066 -0.027905"
+      rpy="-0.23407 0 0" />
+    <parent
+      link="R_B_T" />
+    <child
+      link="R_B_D" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_F_T">
+    <inertial>
+      <origin
+        xyz="0.0097554 -0.011859 -0.0067444"
+        rpy="0 0 0" />
+      <mass
+        value="0.00062019" />
+      <inertia
+        ixx="4.454E-09"
+        ixy="4.6677E-25"
+        ixz="-5.2784E-26"
+        iyy="7.1439E-09"
+        iyz="1.034E-25"
+        izz="7.1439E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/L_F_T.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/L_F_T.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_f_t"
+    type="revolute">
+    <origin
+      xyz="-0.0085 0.042436 0.00056823"
+      rpy="1.7568 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_F_T" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_F_D">
+    <inertial>
+      <origin
+        xyz="0.0039296 -0.022776 0.018007"
+        rpy="0 0 0" />
+      <mass
+        value="0.00011293" />
+      <inertia
+        ixx="4.5428E-10"
+        ixy="-1.4282E-27"
+        ixz="8.3244E-26"
+        iyy="5.2968E-10"
+        iyz="6.4623E-27"
+        izz="5.2968E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/L_F_D.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/L_F_D.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_f_d"
+    type="revolute">
+    <origin
+      xyz="0.007304 -0.049066 -0.027905"
+      rpy="-0.27292 0 0" />
+    <parent
+      link="L_F_T" />
+    <child
+      link="L_F_D" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_B_T">
+    <inertial>
+      <origin
+        xyz="0.0097554 -0.011859 -0.0067444"
+        rpy="0 0 0" />
+      <mass
+        value="0.00062019" />
+      <inertia
+        ixx="4.454E-09"
+        ixy="4.295E-25"
+        ixz="-1.1051E-26"
+        iyy="7.1439E-09"
+        iyz="0"
+        izz="7.1439E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/L_B_T.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/L_B_T.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_b_t"
+    type="revolute">
+    <origin
+      xyz="-0.0085 -0.051005 0.00046595"
+      rpy="1.7332 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="L_B_T" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="L_B_D">
+    <inertial>
+      <origin
+        xyz="0.0039296 -0.022776 0.018007"
+        rpy="0 0 0" />
+      <mass
+        value="0.00011293" />
+      <inertia
+        ixx="4.5428E-10"
+        ixy="-1.0299E-27"
+        ixz="3.9114E-26"
+        iyy="5.2968E-10"
+        iyz="-9.6935E-27"
+        izz="5.2968E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/L_B_D.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://spot_bot/meshes/L_B_D.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_b_d"
+    type="revolute">
+    <origin
+      xyz="0.007304 -0.049066 -0.027905"
+      rpy="-0.23561 0 0" />
+    <parent
+      link="L_B_T" />
+    <child
+      link="L_B_D" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
